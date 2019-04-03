@@ -19,7 +19,12 @@ for(var i = 0; i < squares.length; i++ ){
   //add click listeners to squares
   squares[i].addEventListener("click",function(){
     //Grab color of clicked squares
-
+    var clickedColor = this.style.background;
     //Compare color  to pickedColor
+    if(clickedColor === pickedColor){
+      alert("Correct!!");
+    } else {
+      alert("Try Again!!");
+    }
   });
 }
