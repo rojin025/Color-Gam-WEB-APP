@@ -9,6 +9,7 @@ body {
   padding-bottom: 30%;
   float: left;
   margin: 1.66%;
+  border-radius: 17%;
 }
 
 #container {
@@ -24,13 +25,38 @@ h1{
   background: #C0b283;
   margin: 0;
   text-transform: uppercase;
+  padding: 20px 0;
 }
 
 #colorDisplay {
   font-size: 190%;
 }
+#message {
+  display: inline-block;
+  width: 20%;
+  text-transform: uppercase;
+  font-weight: 700;
+  color : #DCD0C0;
+  letter-spacing: 1px;
+}
 #stripe {
   background: white;
   text-align: center;
   height: 30px;
+}
+
+button {
+  border: none;
+  background: none;
+  text-transform: uppercase;
+  height: 100%;
+  font-weight: 900;
+  color : #DCD0C0;
+  letter-spacing: 1px;
+  font-size: inherit;
+  transition: all 0.3s;
+}
+button:hover{
+  color: white;
+  background: #373737;
 }
