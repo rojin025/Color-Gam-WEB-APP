@@ -6,6 +6,7 @@ var messageDisplay = document.querySelector("#message");
 var h1 = document.querySelector("h1");
 var resetButton = document.querySelector("#reset");
 
+//function for reset button
 resetButton.addEventListener("click", function(){
   //generate random Colors
   colors = generateRandomColor(6);
@@ -13,6 +14,8 @@ resetButton.addEventListener("click", function(){
   pickedColor = pickColor();
   //change color to match the pickedColor
   colorDisplay.textContent = pickedColor;
+  this.textContent = "New Colors";
+  messageDisplay.textContent = "";
   //change color of squuares
   for(var i = 0; i < squares.length; i ++){
     squares[i].style.background = colors[i];
@@ -23,7 +26,7 @@ resetButton.addEventListener("click", function(){
 colorDisplay.textContent = pickedColor;
 
 
-//Logic
+//Main Logic
 for(var i = 0; i < squares.length; i++ ){
   //add initail colors to squuare
   squares[i].style.background = colors[i];
@@ -35,7 +38,7 @@ for(var i = 0; i < squares.length; i++ ){
     //Compare color  to pickedColor
     if(clickedColor === pickedColor){
       messageDisplay.textContent = "Correct";
-      resetButton.textContent = "Play Again";
+      resetButton.textContent = "Play Again?";
       changeColor(clickedColor);
       h1.style.background = clickedColor;
     } else {
@@ -46,6 +49,7 @@ for(var i = 0; i < squares.length; i++ ){
   });
 }
 
+//to change color of square
 function changeColor(color){
   //Loop for squares
   for (var i = 0; i < squares.length; i++) {
@@ -54,6 +58,7 @@ function changeColor(color){
   }
 }
 
+//Function to select random wining color
 function pickColor() {
   var random = Math.floor(Math.random() * colors.length);
   return colors[random];
