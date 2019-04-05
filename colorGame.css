@@ -1,5 +1,6 @@
 body {
   background-color:#232323;
+  margin: 0;
 }
 
 .square {
@@ -17,13 +18,19 @@ body {
 
 h1{
   text-align: center;
+  line-height: 1.1;
+  font-weight: normal;
   color: white;
   background: #C0b283;
+  margin: 0;
+  text-transform: uppercase;
 }
 
+#colorDisplay {
+  font-size: 190%;
+}
 #stripe {
   background: white;
   text-align: center;
   height: 30px;
-
 }
